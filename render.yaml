@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: oanor-athex-mcp
+    runtime: docker
+    plan: starter
+    autoDeploy: true
+    envVars:
+      - key: OANOR_API_KEY
+        sync: false
+      - key: OANOR_BASE_URL
+        value: https://api.oanor.com/athex-api
+      - key: OANOR_TIMEOUT_SECONDS
+        value: "15"
